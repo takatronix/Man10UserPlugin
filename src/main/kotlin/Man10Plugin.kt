@@ -10,7 +10,7 @@ import java.util.*
 
 class Man10UserPlugin : JavaPlugin() {
 
-    var prefix = "§eMan10User"
+    var prefix = "[§5Man10User§f]"
     override fun onEnable() {
         // Plugin startup logic
 
@@ -21,12 +21,16 @@ class Man10UserPlugin : JavaPlugin() {
         org.bukkit.Bukkit.broadcastMessage("aa")
         logger.info("Hello Kotlin!")
 
-        
+
+
     }
 
     override fun onDisable() {
-        Bukkit.broadcastMessage("disabling plugin...")
+        broadcast("Disabling plugin...")
     }
 
+    fun broadcast(message: String){
+        Bukkit.broadcastMessage("${prefix} ${message}")
+    }
 
 }
