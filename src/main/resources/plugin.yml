@@ -1,0 +1,9 @@
+name: Man10User
+version: ${project.version}
+main: red.man10.Man10UserPlugin
+authors:  [takatronix]
+description: Minecraft Man10 User management plugin
+prefix: Man10User
+website: http://man10.red
+commands:
+  mu:
