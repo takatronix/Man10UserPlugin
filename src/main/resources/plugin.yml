@@ -6,4 +6,4 @@ description: Minecraft Man10 User management plugin
 prefix: Man10User
 website: http://man10.red
 commands:
-  mu:
+  muser:
