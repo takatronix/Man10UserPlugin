@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Man10UserPlugin">
+    <output-path>$PROJECT_DIR$/../paper/plugins</output-path>
+    <root id="archive" name="Man10UserPlugin.jar">
+      <element id="module-output" name="Man10UserPlugin.main" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/config.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+    </root>
+  </artifact>
+</component>

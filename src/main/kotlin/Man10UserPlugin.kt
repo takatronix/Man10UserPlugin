@@ -1,17 +1,12 @@
 package red.man10
 
 import org.bukkit.Bukkit
-import org.bukkit.plugin.java.JavaPlugin
-import java.io.File
-import java.util.*
-import org.bukkit.event.player.PlayerJoinEvent
-import org.bukkit.ChatColor;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
+import org.bukkit.entity.Player
+import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
-import java.sql.ResultSet
+import org.bukkit.event.player.PlayerJoinEvent
+import org.bukkit.plugin.java.JavaPlugin
+import java.util.*
 
 
 class Man10UserPlugin : JavaPlugin() , Listener {
@@ -23,7 +18,8 @@ class Man10UserPlugin : JavaPlugin() , Listener {
         server.pluginManager.registerEvents(this, this)
         saveResource("config.yml", false)
 
-        getCommand("muser").setExecutor(Man10UserCommand(this));
+       // getCommand("muser")!!.setExecutor(Man10UserCommand(this));
+       // getCommand("user")!!.setExecutor(Man10UserCommand(this));
     }
 
     override fun onDisable() {
@@ -51,9 +47,11 @@ class Man10UserPlugin : JavaPlugin() , Listener {
 
     @EventHandler
     fun onPlayerJoin(e: PlayerJoinEvent) {
-        Bukkit.getScheduler().runTaskAsynchronously(this) {
+
+
+        Bukkit.getScheduler().runTaskAsynchronously(this, Runnable {
             checkUser(e.player)
-        }
+        })
     }
 
 

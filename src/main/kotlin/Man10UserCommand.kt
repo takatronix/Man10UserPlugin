@@ -30,22 +30,6 @@ public class Man10UserCommand (_plugin: Man10UserPlugin) : CommandExecutor {
         }
 
         val command = args[0]
-        Bukkit.getScheduler().runTaskAsynchronously(this.plugin) {
-            try {
-
-                plugin.broadcast("start")
-                Thread.sleep(1000);
-                plugin.broadcast(" おわり")
-
-
-
-
-            } catch (e:Exception){
-                Bukkit.getLogger().info(e.message)
-                println(e.message)
-            }
-        }
-
 
 
         return true
