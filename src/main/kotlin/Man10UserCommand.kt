@@ -17,9 +17,19 @@ public class Man10UserCommand (_plugin: Man10UserPlugin) : CommandExecutor {
 
     override fun onCommand(sender: CommandSender, cmd: Command, label: String, args: Array<String>): Boolean {
 
-        if (sender is Player == false) {
-            sender.sendMessage("Can't use in console.")
+        if(args.count() == 0){
+            sender.sendMessage("aaa")
             return false
+        }
+
+        val command = args[0]
+
+        sender.sendMessage("test")
+
+        /*
+        if (sender is Player == false) {
+        //    sender.sendMessage("Can't use in console.")
+        //    return false
         }
 
         val p = sender as Player
@@ -28,8 +38,8 @@ public class Man10UserCommand (_plugin: Man10UserPlugin) : CommandExecutor {
             showHelp(sender)
             return false
         }
+*/
 
-        val command = args[0]
 
 
         return true

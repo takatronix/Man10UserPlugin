@@ -6,5 +6,10 @@ description: Minecraft Man10 User management plugin
 prefix: Man10User
 website: http://man10.red
 api-version: 1.17
+softdepend:
+  - Man10CommonLibs
 commands:
   muser:
+    default: op
+  user:
+    default: op

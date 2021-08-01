@@ -18,6 +18,10 @@ class Man10UserPlugin : JavaPlugin() , Listener {
         server.pluginManager.registerEvents(this, this)
         saveResource("config.yml", false)
 
+
+        getCommand("muser")!!.setExecutor(Man10UserCommand(this))
+        getCommand("user")!!.setExecutor(Man10UserCommand(this))
+
        // getCommand("muser")!!.setExecutor(Man10UserCommand(this));
        // getCommand("user")!!.setExecutor(Man10UserCommand(this));
     }
